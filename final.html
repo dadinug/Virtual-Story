@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ara Ara Nihongo</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="story.css">
+        <link rel="icon" href="img/fire-icon.png" type="image/x-icon"/>
+        <script src="data.js"></script>
+        <style>
+        /* --- (ambil CSS utama dari proyekmu, dipersingkat) --- */
+        .point { margin-left:1.6rem; }
+        .pointz { margin-left:2.2rem; }
+        .contentPoint {  font-family: myFirstFont; font-size:1.6rem; line-height:3rem; color:rgb(94,94,94); }
+        .panel { display: none; margin:0.8rem 0.2rem; color:rgba(128,128,128,0.45); }
+        .hid2 { display:flex; gap:0.4rem; }
+        .panel1,.panel2,.panel3 { font-size:14px; background:rgba(179,179,179,0.219); padding:0.2rem 0.5rem; border-radius:4px; cursor:pointer;}
+        .urutan1 { display:none; }
+        .hid1 { display:block; position: absolute; margin-top:0.4rem; }
+        .leftPadding { padding-left:0.7rem !important; border-left:2px solid rgba(112,128,144,0.34); }
+        .terjemahan { font-size:1.6rem; color:#81a7a3c9; margin-bottom:1.5rem; }
+        button { margin:0 0.25rem; padding:0.2rem 0.6rem; }
+        ruby rt { visibility: hidden; color: #A19895; }
+
+        .rubah { margin-bottom: 0rem !important; }
+        .spc { display: none; width: 1em; /* bisa disesuaikan: 1em, 0.5em, 10px, dll */ }
+
+        .noKanji { display: none; }
+        .wKanji { display: block; }
+        .panl { margin-bottom: 1rem; }
+        .marg { margin-top: 1rem ;}
+        
+        /**/
+        .xpoint { margin-left:1.6rem; }
+        .xcontentPoint {  font-family: myFirstFont; font-size:1.6rem; line-height:3rem; color:rgb(94,94,94); }
+        .xpanel { display: none; margin:0.8rem 0.2rem; color:rgba(128,128,128,0.45); }
+      </style>
+    </head>
+    <body>
+
+        
+      <div class="bgHeader">
+        <div class="judul">RACE<span> TO </span>JAPAN</div>
+        <div class="slide">
+            <div class="list">
+                <div class="item">
+                    <p>There's so much more to life than what you're feeling now.</p>
+                </div>
+                <div class="item">
+                    <p>It's not really how much you know but how well you can learn it.</p>
+                </div>
+                <div class="item">
+                    <p>You're not obligated to win. You're obligated to keep trying to do the best you can everyday.</p>
+                </div>
+                <div class="item">
+                    <p>Keputusan yang bagus datang dari pengalaman dan pengalaman itu datang dari keputusan yang bodoh.</p>
+                </div>
+            </div>
+        </div>
+      </div>
+      
+      
+      <div class="space">
+      </div>
+      
+      <div class="kontrol">
+        <div class="kolom">
+            <div class="top">Furigana</div>
+                <button class="botan" id="btnKana">Show</button></div>
+        <div class="kolom">
+            <div class="top">Analisis</div>
+            <button class="botan" id="btnAnalis">Show</button>
+        </div>
+        <!-- <div class="kolom">
+            <div class="top">Partikel</div>
+            <button class="botan" id="btnColor">Show</button>
+        </div> -->
+      </div>
+      
+      <div class="seksi"> 
+        <br>            
+        <div class="utama">
+          <br>
+          <details class="panah1 margin">
+            <summary><span class="h2">Nilai Ujian Dini</span></summary>
+            <details class="panah2 content">
+                <summary><span class="h3">Part 1 --- Nilai Merah</span></summary>
+                <div id="konten001"></div>
+                <br>
+            </details>
+            <details class="panah2 content">
+                <summary><span class="h3">Part 2 --- Masalah</span></summary>
+                <div id="konten002"></div>
+                <br>
+            </details>
+            <details class="panah2 content">
+                <summary><span class="h3">Part 3 --- Tipu Daya</span></summary>
+                <div id="konten003"></div>
+                <br>
+            </details>
+            <details class="panah2 content">
+                <summary><span class="h3">Part 4 --- Kebenaran</span></summary>
+                <div id="konten004"></div>
+                <br>
+            </details>
+              
+          </details>
+          <details class="panah1 margin">
+            <summary><span class="h2">Alice Story</span></summary>
+            <details class="panah2 content">
+                <summary><span class="h3">Part 1</span></summary>
+                <div class="urutan1">1.</div>
+                <div class="point" id="xbag1">
+                    <div class="contentPoint noKanji">            
+                        <span class="v">ある</span><ruby><rb>日</rb><rp>(</rp><rt>ひ</rt><rp>)</rp></ruby><span class="spc">   </span>アリス<span class="par">は</span><span class="spc">   </span><ruby><rb>川</rb><rp>(</rp><rt>かわ</rt><rp>)</rp></ruby><span class="par">の</span><span class="spc">   </span><ruby class="ja"><span class="jaa">そば</span><rt class="sp">pinggir</rt></ruby><span class="par">に</span><span class="spc">   </span><span class="v">いた</span>。<span class="n">お</span>ねえ<span class="n">ちゃん</span><span class="par">は</span><span class="spc">   </span><span class="adj"><ruby class="ja"><span class="jaa">つまらない</span><rt class="sp">bosan</rt></ruby></span><ruby><rb>本</rb><rp>(</rp><rt>ほん</rt><rp>)</rp></ruby><span class="par">を</span><span class="spc">   </span><span class="v"></ruby>よんで</span><span class="v1">いて</span><span class="spc">   </span><span class="v"><ruby class="ja"><span class="jaa">あそんで</span><rt class="sp">bermain</rt></ruby></span><span class="v1">くれなかった</span>。「<span class="adj">おもしろい</span>こと<span class="par">が</span><span class="spc">   </span><span class="adj">ない</span>」と<span class="spc">   </span>アリス<span class="par">は</span><span class="spc">   </span><span class="v"><ruby class="ja"><span class="jaa">いった</span><rt class="sp">berkata</rt></ruby></span>。<ruby class="ja"><span class="jaa">そのとき</span><rt class="sp">saat itu</rt></ruby><span class="spc">   </span><span class="adj">しろい</span>ウサギ<span class="par">が</span><span class="spc">   </span><span class="v"><ruby class="ja"><span class="jaa">とうった</span><rt class="sp">lewat</rt></ruby></span>。<ruby class="ja"><span class="jaa">ふつう</span><rt class="sp">biasa</rt></ruby><span class="par">の</span><span class="spc">   </span>ウサギ<span class="par">では</span><span class="spc">   </span><span class="adj">なくて</span><span class="spc">   </span>シャツ<span class="par">を</span><span class="spc">   </span><span class="v"><ruby class="ja"><span class="jaa">きて</span><rt class="sp">memakai</rt></ruby>いる</span>ウサギ<span class="spc">   </span><span class="v">だった</span>。ウサギ<span class="par">は</span><span class="spc">   </span><ruby class="ja"><span class="jaa">とけい</span><rt class="sp">jam</rt></ruby><span class="par">を</span><span class="spc">   </span><span class="v"><ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>た</span>「<span class="adj"><ruby class="ja"><span class="jaa">おそい</span><rt class="sp">telat</rt></ruby>！おそい!</span>」<span class="par">と</span><span class="spc">   </span><span class="v"><ruby class="ja"><span class="jaa">いって</span><rt class="sp">berkata</rt></ruby></span><span class="spc">   </span><span class="v1"><ruby class="ja"><span class="jaa">はしった</span><rt class="sp">berlari</rt></ruby></span>。「<span class="n">ちょっと</span<span class="spc">   </span><span class="v"><ruby class="ja"><span class="ja">まって</span><rt class="sp">tunggu</rt></ruby></span><span class="v1">ください</span>」<span class="par">と</span><span class="spc">   </span>アリス<span class="par">は</span><span class="spc">   </span><span class="v"><ruby class="ja"><span class="jaa">よんだ</span><rt class="sp">panggil</rt></ruby></span>。でも<span class="spc">   </span>ウサギ<span class="par">は</span><span class="spc">   </span><ruby class="ja"><span class="jaa">とまら<span class="adj">なくて</span></span><rt class="sp">tidak berhenti</rt></ruby><span class="spc">   </span><span class="v"><ruby class="ja"><span class="jaa">はしった</span><rt class="sp">berlari</rt></ruby></span>。
+                    </div>
+                    <div class="contentPoint wKanji">
+                        <span class="v">ある</span><ruby><rb>日</rb><rp>(</rp><rt>ひ</rt><rp>)</rp></ruby><span class="spc">   </span>アリス<span class="par">は</span><span class="spc">   </span><ruby><rb>川</rb><rp>(</rp><rt>かわ</rt><rp>)</rp></ruby><span class="par">の</span><span class="spc">   </span><ruby class="ja"><span class="jaa"><ruby><rb>傍</rb><rp>(</rp><rt>そば</rt><rp>)</rp></ruby></span><rt class="sp">pinggir</rt></ruby><span class="par">に</span><span class="spc">   </span><span class="v">いた</span>。<span class="n">お</span><ruby><rb>姉</rb><rp>(</rp><rt>ねえ</rt><rp>)</rp></ruby><span class="n">ちゃん</span><span class="par">は</span><span class="spc">   </span><span class="adj"><ruby class="ja"><span class="jaa">つまらない</span><rt class="sp">bosan</rt></ruby></span><ruby><rb>本</rb><rp>(</rp><rt>ほん</rt><rp>)</rp></ruby><span class="par">を</span><span class="spc">   </span><span class="v"><ruby><rb>読</rb><rp>(</rp><rt>よ</rt><rp>)</rp></ruby>んで</span><span class="v1">いて</span><span class="spc">   </span><span class="v"><ruby class="ja"><span class="jaa"><ruby><rb>遊</rb><rp>(</rp><rt>あそ</rt><rp>)</rp>んで</ruby></span><rt class="sp">bermain</rt></ruby></span><span class="v1">くれなかった</span>。「<span class="adj"><ruby><rb>面白</rb><rp>(</rp><rt>おもしろ</rt><rp>)</rp>い</ruby></span>こと<span class="par">が</span><span class="spc">   </span><span class="adj">ない</span>」と<span class="spc">   </span>アリス<span class="par">は</span><span class="spc">   </span><span class="v"><ruby><rb>言</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>った</span>。<ruby class="ja"><span class="jaa">その<ruby><rb>時</rb><rp>(</rp><rt>とき</rt><rp>)</rp></ruby></span><rt class="sp">saat itu</rt></ruby><span class="spc">   </span><span class="adj"><ruby><rb>白</rb><rp>(</rp><rt>しろ</rt><rp>)</rp>い</ruby></span>ウサギ<span class="par">が</span><span class="spc">   </span><span class="v"><ruby class="ja"><span class="jaa"><ruby><rb>通</rb><rp>(</rp><rt>とお</rt><rp>)</rp>った</ruby></span><rt class="sp">lewat</rt></ruby></span>。<ruby class="ja"><span class="jaa"><ruby><rb>普通</rb><rp>(</rp><rt>ふつう</rt><rp>)</rp></ruby></span><rt class="sp">biasa</rt></ruby><span class="par">の</span><span class="spc">   </span>ウサギ<span class="par">では</span><span class="spc">   </span><span class="adj">なくて</span><span class="spc">   </span>シャツ<span class="par">を</span><span class="spc">   </span><span class="v"><ruby class="ja"><span class="jaa"><ruby><rb>着</rb><rp>(</rp><rt>き</rt><rp>)</rp>て</ruby></span><rt class="sp">memakai</rt></ruby>いる</span>ウサギ<span class="spc">   </span><span class="v">だった</span>。ウサギ<span class="par">は</span><span class="spc">   </span><ruby class="ja"><span class="jaa"><ruby><rb>時計</rb><rp>(</rp><rt>とけい</rt><rp>)</rp></ruby></span><rt class="sp">jam</rt></ruby><span class="par">を</span><span class="spc">   </span><span class="v"><ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>た</span>「<span class="adj"><ruby><rb>遅</rb><rp>(</rp><rt>おそ</rt><rp>)</rp></ruby>い！<ruby><rb>遅</rb><rp>(</rp><rt>おそ</rt><rp>)</rp></ruby>い!</span>」<span class="par">と</span><span class="spc">   </span><span class="v"><ruby class="ja"><span class="jaa"><ruby><rb>言</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>って</span><rt class="sp">berkata</rt></ruby></span><span class="spc">   </span><span class="v1"><ruby class="ja"><span class="jaa"><ruby><rb>走</rb><rp>(</rp><rt>はし</rt><rp>)</rp></ruby>った</span><rt class="sp">berlari</rt></ruby></span>。「<span class="n">ちょっと</span<span class="spc">   </span><span class="v"><ruby class="ja"><span class="jaa"><ruby><rb>待</rb><rp>(</rp><rt>ま</rt><rp>)</rp></ruby>って</span><rt class="sp">tunggu</rt></ruby></span><span class="v1"><ruby><rb>下</rb><rp>(</rp><rt>くだ</rt><rp>)</rp></ruby>さい</span>」<span class="par">と</span><span class="spc">   </span>アリス<span class="par">は</span><span class="spc">   </span><span class="v"><ruby class="ja"><span class="jaa"><ruby><rb>呼</rb><rp>(</rp><rt>よ</rt><rp>)</rp></ruby>んだ</span><rt class="sp">panggil</rt></ruby></span>。でも<span class="spc">   </span>ウサギ<span class="par">は</span><span class="spc">   </span><ruby class="ja"><span class="jaa"><ruby><rb>止</rb><rp>(</rp><rt>と</rt><rp>)</rp>まら<span class="adj">なくて</span></ruby></span><rt class="sp">tidak berhenti</rt></ruby><span class="spc">   </span><span class="v"><ruby class="ja"><span class="jaa"><ruby><rb>走</rb><rp>(</rp><rt>はし</rt><rp>)</rp></ruby>った</span><rt class="sp">berlari</rt></ruby></span>。
+                    </div>
+                    <div class="panel">
+                        <div class="panel1">
+                            spacing
+                            <div class="iconSample"></div>
+                        </div>
+                        <div class="panel2">
+                            hiragana
+                            <div class="iconSample"></div>
+                        </div>
+                        <div class="panel3 beda1">
+                            mappu
+                            <div class="iconSample"></div>
+                        </div>
+                    </div>
+                    <div class="terjemahan">
+                      One day, Alice was by the river.
+                      Her older sister was reading a boring book and wouldn’t play with her.
+                      “There’s nothing interesting,” Alice said.
+                      At that moment, a white rabbit passed by.
+                      It wasn’t an ordinary rabbit — it was wearing a shirt.
+                      The rabbit looked at its watch and said, “I’m late! I’m late!” and started running.
+                      “Please wait a moment!” Alice called out.
+                      But the rabbit didn’t stop and kept running.
+                    </div>
+                </div>
+                <br>
+            </details>
+            <details class="panah2 content">
+              <summary><span class="h3">Part 2</span></summary>
+              <div class="urutan1">2.</div>
+              <div class="point" id="xbag2">
+                <div class="contentPoint noKanji">
+                  アリスはとびあがて、ウサギのあとをおった。しゃべるウサギをみたことがない。ウサギははやくはしって、きゅうにウサギのあなにとびこんだ。アリスもウサギのあなにとびこんだ。あなのなかはたてあなだった。アリスはすぐしたにおちた。でも、おどろいたことにゆっくりゆっくりおちた。
+                </div>
+                <div class="contentPoint wKanji">
+                    アリス<span class="par">は</span><span class="spc">　</span><ruby class="ja"><span class="jaa"><span class="v"><ruby></ruby><ruby><rb>飛</rb><rp>(</rp><rt>と</rt><rp>)</rp></ruby>び</span><span class="v1"><ruby><rb>上</rb><rp>(</rp><rt>あ</rt><rp>)</rp>がて</ruby></span></span><rt class="sp">melompat</rt></ruby>、ウサギ<span class="par">の</span><span class="spc">　</span><ruby><rb>後</rb><rp>(</rp><rt>あと</rt><rp>)</rp></ruby><span class="par">を</span><span class="spc">　</span><ruby class="ja"><span class="jaa"><span class="v"><ruby><rb>追</rb><rp>(</rp><rt>お</rt><rp>)</rp></ruby>った</span></span><rt class="sp">mengikuti</rt></ruby>。<ruby class="ja"><span class="jaa"><span class="v">しゃべる</span></span><rt class="sp">ngobrol</rt></ruby>ウサギ<span class="par">を</span><span class="spc">　</span><span class="v"><ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>た</span>こと<span class="par">が</span><span class="spc">　</span><span class="adj">ない</span>。ウサギ<span class="par">は</span><span class="spc">　</span><span class="adj"><ruby><rb>早</rb><rp>(</rp><rt>はや</rt><rp>)</rp></ruby>く</span><span class="v"><ruby><rb>走</rb><rp>(</rp><rt>はし</rt><rp>)</rp></ruby>って</span>、<ruby class="ja"><span class="jaa"><ruby><rb>急</rb><rp>(</rp><rt>きゅう</rt><rp>)</rp></ruby></span><rt class="sp">tiba-tiba</rt></ruby><span class="par">に</span><span class="spc">　</span>ウサギ<span class="par">の</span><span class="spc">　</span><ruby class="ja"><span class="jaa"><ruby><rb>穴</rb><rp>(</rp><rt>あな</rt><rp>)</rp></ruby></span><rt class="sp">lubang</rt></ruby><span class="par">に</span><span class="spc">　</span><ruby class="ja"><span class="jaa"><span class="v"><ruby><rb>飛</rb><rp>(</rp><rt>と</rt><rp>)</rp></ruby>び</span><span class="v1"><ruby><rb>込</rb><rp>(</rp><rt>こ</rt><rp>)</rp></ruby>んだ</span></span><rt class="sp">melompat</rt></ruby>。アリス<span class="par">も</span><span class="spc">　</span>ウサギ<span class="par">の</span><span class="spc">　</span><ruby><rb>穴</rb><rp>(</rp><rt>あな</rt><rp>)</rp></ruby><span class="par">に</span><span class="spc">　</span><span class="v"><ruby><rb>飛</rb><rp>(</rp><rt>と</rt><rp>)</rp></ruby>び</span><span class="v1"><ruby><rb>込</rb><rp>(</rp><rt>こ</rt><rp>)</rp></ruby>んだ</span>。<ruby><rb>穴</rb><rp>(</rp><rt>あな</rt><rp>)</rp></ruby><span class="par">の</span><span class="spc">　</span><ruby><rb>中</rb><rp>(</rp><rt>なか</rt><rp>)</rp></ruby><span class="par">は</span><span class="spc">　</span><ruby class="ja"><span class="jaa">たて<ruby><rb>穴</rb><rp>(</rp><rt>あな</rt><rp>)</rp></ruby></span><rt class="sp">lubang lurus</rt></ruby><span class="par">だった</span>。アリス<span class="par">は</span><span class="spc">　</span>すぐ<ruby><rb><span class="spc">　</span>下</rb><rp>(</rp><rt>した</rt><rp>)</rp></ruby><span class="par">に</span><span class="spc">　</span><ruby class="ja"><span class="jaa"><span class="v"><ruby><rb>落</rb><rp>(</rp><rt>お</rt><rp>)</rp></ruby>ちた</span></span><rt class="sp">jatuh</rt></ruby>。でも、<ruby class="ja"><span class="jaa"><span class="v">おどろいた</span>こと</span><rt class="sp">terkejut</rt></ruby><span class="par">に</span><span class="spc">　</span><ruby class="ja"><span class="jaa">ゆっくり</span><rt class="sp">perlahan-lahan</rt></ruby><span class="spc">　</span>ゆっくり<span class="spc">　</span><span class="v"><ruby><rb>落</rb><rp>(</rp><rt>お</rt><rp>)</rp></ruby>ちた</span>。
+                </div>
+                <div class="panel">
+                    <div class="panel1">
+                        spacing
+                        <div class="iconSample"></div>
+                    </div>
+                    <div class="panel2">
+                        hiragana
+                        <div class="iconSample"></div>
+                    </div>
+                    <div class="panel3 beda1">
+                        mappu
+                        <div class="iconSample"></div>
+                    </div>
+                </div>
+                <div class="terjemahan">
+                  Alice jumped up and ran after the rabbit.
+                  She had never seen a talking rabbit before.
+                  The rabbit ran quickly and suddenly jumped into a rabbit hole.
+                  Alice also jumped into the rabbit hole.
+                  Inside, it was a vertical tunnel.
+                  Alice immediately started falling down.
+                  But to her surprise, she fell slowly—very slowly.
+                </div>
+              </div>
+              <br>
+            </details>
+            <details class="panah2 content">
+              <summary><span class="h3">Part 3</span></summary>
+              <div class="urutan1">3.</div>
+              <div class="point" id="xbag3">
+                  <div class="contentPoint noKanji">
+                    おちるあいだにひまがたっぷりあってまわりをゆっくりみまわせた。まずはしたをみてみたけど、くらすぎてなにもみえなかった。そのあと、あなのまわりをみて、めにとまるのはぎっしりならんだ。とだなやほんだなだった。たなのひとつからびんをとりさげた。
+                  </div>
+                  <div class="contentPoint wKanji">
+                    <span class="v"><ruby><rb>落</rb><rp>(</rp><rt>お</rt><rp>)</rp></ruby>ちる</span><ruby class="ja"><span class="jaa"><ruby><rb>間</rb><rp>(</rp><rt>ま</rt><rp>)</rp></ruby></span><rt class="sp">during</rt></ruby><span class="par">に</span><span class="spc">　</span><ruby class="ja"><span class="jaa">ひま</span><rt class="sp">free time</rt></ruby><span class="par">が</span><span class="spc">　</span><ruby class="ja"><span class="jaa">たっぷり</span><rt class="sp">plentifully</rt></ruby><span class="spc">　</span><span class="v">あって</span><span class="spc">　</span><ruby class="ja"><span class="jaa">まわり</span><rt class="sp">surroundings</rt></ruby><span class="par">を</span><span class="spc">　</span><ruby class="ja"><span class="jaa">ゆっくり</span><rt class="sp">leisurely</rt></ruby><span class="spc">　</span><ruby class="ja"><span class="jaa"><span class="v"><ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby></span><span class="v1">まわせた</span></span><rt class="sp">can look around</rt></ruby>。まず<span class="par">は</span><span class="spc">　</span><ruby><rb>下</rb><rp>(</rp><rt>した</rt><rp>)</rp></ruby><span class="par">を</span><span class="spc">　</span><span class="v"><ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>て</span><ruby class="ja"><span class="jaa"><span class="v1">みた</span></span><rt class="sp">try</rt></ruby><span class="par">けど</span>、<ruby class="ja"><span class="jaa"><span class="adj"><ruby><rb>暗</rb><rp>(</rp><rt>くら</rt><rp>)</rp></ruby></span><span class="v">すぎて</span></span><rt class="sp">too dark</rt></ruby><span class="spc">　</span><ruby><rb>何</rb><rp>(</rp><rt>なに</rt><rp>)</rp></ruby><span class="par">も</span><span class="spc">　</span><span class="v"><ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>えなかった</span>。その<ruby><rb>後</rb><rp>(</rp><rt>あと</rt><rp>)</rp></ruby>、<ruby><rb>穴</rb><rp>(</rp><rt>あな</rt><rp>)</rp></ruby><span class="par">の</span><span class="spc">　</span>まわり<span class="par">を</span><span class="spc">　</span><span class="v"><ruby><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>て</span>、<ruby><rb>目</rb><rp>(</rp><rt>め</rt><rp>)</rp></ruby><span class="par">に</span><span class="spc">　</span><span class="v"><ruby><rb>止</rb><rp>(</rp><rt>と</rt><rp>)</rp></ruby>まる</span><span class="par1">の</span><span class="par">は</span><span class="spc">　</span><ruby class="ja"><span class="jaa">ぎっしり</span><rt class="sp">crowded</rt></ruby><span class="spc">　</span><ruby class="ja"><span class="jaa"><span class="v"><ruby><rb>並</rb><rp>(</rp><rt>なら</rt><rp>)</rp></ruby>んだ</span></span><rt class="sp">to line up</rt></ruby>。<ruby class="ja"><span class="jaa">とだな</span><rt class="sp">cupboard</rt></ruby><span class="par">や</span><span class="spc">　</span><ruby class="ja"><span class="jaa">ほんだな</span><rt class="sp">bookshelf</rt></ruby><span class="par">だった</span>。<ruby class="ja"><span class="jaa">たな</span><rt class="sp">shelf</rt></ruby><span class="par">の</span><span class="spc">　</span><ruby><rb>一</rb><rp>(</rp><rt>ひと</rt><rp>)</rp></ruby>つ<span class="par">から</span><span class="spc">　</span><ruby class="ja"><span class="jaa">びん</span><rt class="sp">jar</rt></ruby><span class="par">を</span><span class="spc">　</span><ruby class="ja"><span class="jaa"><span class="v"><ruby><rb>取</rb><rp>(</rp><rt>と</rt><rp>)</rp></ruby>り</span><span class="v1"><ruby><rb>下</rb><rp>(</rp><rt>くだ</rt><rp>)</rp></ruby>した</span></span><rt class="sp">take down</rt></ruby>。
+                  </div>
+                  <div class="panel">
+                    <div class="panel1">
+                      spacing
+                      <div class="iconSample"></div>
+                    </div>
+                    <div class="panel2">
+                      hiragana
+                      <div class="iconSample"></div>
+                    </div>
+                    <div class="panel3 beda1">
+                      mappu
+                      <div class="iconSample"></div>
+                    </div>
+                  </div>
+                  <div class="terjemahan">
+                    While she was falling, Alice had plenty of time and looked around slowly.
+                    First, she tried looking down, but it was too dark to see anything.
+                    Then she looked around the sides of the hole, and what caught her eye were tightly packed cupboards and bookshelves.
+                    From one of the shelves, she took down a bottle.
+                  </div>
+              </div>
+              <br>
+            </details>
+            <details class="panah2 content">
+              <summary><span class="h3">Part 4</span></summary>
+              <div class="urutan1">4.</div>
+              <div class="point" id="xbag4">
+                <div class="contentPoint noKanji">
+                    そのびんにはラベルがはってあって「オレンジ・マーマレード」とかいてあった。でも、びんはからっぽだった。アリスはからっぽのびんでも、したへおとしてはわるいとおもった。「アリスがびんを」うまくとだなのひとつへとおりすがりにおいておいた。
+                </div>
+                <div class="contentPoint wKanji">
+                    そのびん<span class="blue1">に</span><span class="blue">は</span><ruby class="ja"><span class="jaa">ラベル</span><rt class="sp">label</rt></ruby>が<ruby class="ja"><span class="jaa"><ruby><rb>貼</rb><rp>(</rp><rt>は</rt><rp>)</rp>って</ruby></span><rt class="sp">to stick</rt></ruby>あって「オレンジ・マーマレード」<span class="blue">と</span><ruby class="ja"><span class="jaa"><ruby><rb>書</rb><rp>(</rp><rt>か</rt><rp>)</rp>いて</ruby></span><rt class="sp">to write</rt></ruby>あった。でも、びん<span class="blue">は</span><ruby class="ja"><span class="jaa"><ruby><rb>空</rb><rp>(</rp><rt>から</rt><rp>)</rp>っぽ</ruby></span><rt class="sp">empty</rt></ruby><span class="blue">だった</span>。アリス<span class="blue">は</span><ruby><rb>空</rb><rp>(</rp><rt>から</rt><rp>)</rp></ruby>っぽ<span class="blue">の</span>びん<span class="blue1">で</span><span class="blue">も</span>、<ruby><rb>下</rb><rp>(</rp><rt>した</rt><rp>)</rp></ruby><span class="blue">へ</span><ruby><rb>落</rb><rp>(</rp><rt>お</rt><rp>)</rp></ruby>とし<span class="blue1">て</span><span class="blue">は</span><ruby class="ja"><span class="jaa"><ruby><rb>悪</rb><rp>(</rp><rt>わる</rt><rp>)</rp>い</ruby></span><rt class="sp">bad</rt></ruby><span class="blue">と</span><ruby><rb>思</rb><rp>(</rp><rt>おも</rt><rp>)</rp></ruby>った。「アリス<span class="blue">が</span>びん<span class="blue">を</span>」<ruby class="ja"><span class="jaa">うまく</span><rt class="sp">skilfully</rt></ruby>とどな<span class="blue">の</span><ruby><rb>一</rb><rp>(</rp><rt>ひと</rt><rp>)</rp></ruby>つ<span class="blue">へ</span><ruby class="ja"><span class="jaa"><ruby><rb>通</rb><rp>(</rp><rt>とお</rt><rp>)</rp>りすがり<span class="blue">に</span></ruby></span><rt class="sp">in passing</rt></ruby><ruby class="ja"><span class="jaa"><ruby><rb>置</rb><rp>(</rp><rt>お</rt><rp>)</rp>いて</ruby></span><rt class="sp">to put</rt></ruby>おいた。
+                </div>
+                <div class="panel">
+                  <div class="panel1">
+                    spacing
+                    <div class="iconSample"></div>
+                  </div>
+                  <div class="panel2">
+                    hiragana
+                    <div class="iconSample"></div>
+                  </div>
+                  <div class="panel3 beda1">
+                    mappu
+                    <div class="iconSample"></div>
+                  </div>
+                </div>
+                <div class="terjemahan">
+                  There was a label on the bottle that said “Orange Marmalade.”
+                  But the bottle was empty.
+                  Even though it was empty, Alice thought it would be bad to drop it while falling.
+                  So, as she passed by one of the cupboards, she skillfully placed the bottle on it.
+                </div>
+              </div>
+              <br>
+            </details>
+        </details>
+
+        </div>
+        <br>
+      </div> 
+      
+      <div class="space"></div>
+      <div class="footer"></div>
+      <div class="bungkus">
+      <div class="scallop-up"></div>
+      <div class="scallop-up-shadow"></div>
+      </div>
+      <div class="colour-block">
+          <p>© designed by Dadi</p>
+      </div>
+
+      <script>
+      /* =========================
+        Modular renderer (robust)
+        ========================= */
+      function renderContent({ id, main, panel }) {
+        const container = document.getElementById(id);
+        if (!container) {
+          console.warn('renderContent: id not found', id);
+          return;
+        }
+
+        // isi main
+        container.innerHTML = main || '';
+
+        // jika tidak ada panel yang diminta, lewati pengisian panel
+        if (!panel) {
+          // pasang handlers pada area ini (meskipun tidak ada panel)
+          setupPanelClicks(container);
+          setupButtons(container);
+          console.log('renderContent: no panel inserted for', id);
+          return;
+        }
+
+        // ada panel: cari .panel di dalam container. Kalau tidak ada, sisipkan satu panel-wrapper di atas
+        requestAnimationFrame(() => {
+          let panels = container.querySelectorAll('.panel');
+
+          if (panels.length === 0) {
+            // fallback: sisipkan satu container .panel di bagian paling atas
+            const wrapper = document.createElement('div');
+            wrapper.className = 'panel';
+            container.insertBefore(wrapper, container.firstChild);
+            panels = container.querySelectorAll('.panel');
+          }
+
+          panels.forEach(panelEl => {
+            panelEl.innerHTML = panel;
+          });
+
+          // pasang handlers & tombol (scoped to container)
+          setupPanelClicks(container);
+          setupButtons(container);
+
+          console.log('renderContent: panels populated for', id, 'panelsFound=', panels.length);
+        });
+      }
+
+      /* =========================
+        Panel interactions (scoped to root)
+        ========================= */
+      function setupPanelClicks(root = document) {
+        // untuk setiap .point di root
+        root.querySelectorAll('.point').forEach(point => {
+          // PANEL1 => toggle spc display inside this point
+          const panel1 = point.querySelector('.panel1');
+          if (panel1) {
+            let hidden = true;
+            panel1.addEventListener('click', () => {
+              const spcs = point.querySelectorAll('.spc');
+              spcs.forEach(s => s.style.display = hidden ? 'inline-block' : 'none');
+              panel1.style.backgroundColor = hidden ? 'rgb(195,209,255)' : '';
+              hidden = !hidden;
+            });
+          }
+
+          // PANEL2 => toggle noKanji / wKanji
+          const panel2 = point.querySelector('.panel2'); // gunakan selector tunggal
+          if (panel2) {
+            let showW = true; // Awalnya wKanji tampil
+            panel2.addEventListener('click', () => {
+              const noK = point.querySelector('.noKanji');
+              const wK  = point.querySelector('.wKanji');
+              // jika tidak ada salah satu, coba cari dalam root umum juga (fallback)
+              if (!noK) noK = document.querySelector('.noKanji');
+              if (!wK)  wK  = document.querySelector('.wKanji');
+
+              if (noK && wK) {
+                noK.style.display = showW ? 'block' : 'none';
+                wK.style.display  = showW ? 'none' : 'block';
+                panel2.style.backgroundColor = showW ? 'rgb(195,209,255)' : '';
+                showW = !showW;
+              } else {
+                // debug
+                console.warn('panel2 click: no .noKanji or .wKanji found in point/root');
+              }
+            });
+          }
+
+          // PANEL3 => color toggle for certain classes inside point
+          const panel3 = point.querySelector('.panel3');
+          if (panel3 && !panel3.__hasHandler) {
+            panel3.__hasHandler = true;
+            let toggled = false;
+            panel3.addEventListener('click', () => {
+              const v = point.querySelectorAll('.v');
+              const n = point.querySelectorAll('.n');
+              const par = point.querySelectorAll('.par');
+              const adj = point.querySelectorAll('.adj');
+
+              // 🎨 daftar warna berdasarkan kelas panel
+              const colorSets = {
+                default: {
+                  vColor: "rgb(167,120,82)",
+                  v1Color: "rgba(167,120,82,0.666)",
+                },
+                beda1: {
+                  vColor: "rgb(167, 120, 82)",
+                  v1Color: "rgba(167, 120, 82, 0.666)",
+                  nColor: "rgba(94, 94, 94, 0.726)",
+                  parColor: "rgb(74, 148, 197)",
+                  par1Color: "rgb(139, 188, 204)",
+                  adjColor: "rgb(94, 179, 91)"
+                },
+                beda2: {
+                  vColor: "rgb(98, 141, 202)",
+                  v1Color: "rgba(98, 141, 202, 0.666)",
+                }
+              };
+
+              // 🔍 Cari nama kelas panel3 yang ada di daftar colorSets
+              let activeClass = 'default';
+              for (const key in colorSets) {
+                if (panel3.classList.contains(key)) {
+                  activeClass = key;
+                  break;
+                }
+              }
+
+              const set = colorSets[activeClass];
+              toggled = !toggled;
+
+              v.forEach(e => e.style.color = toggled ? set.vColor : '');
+              n.forEach(e => e.style.color = toggled ? set.nColor : '');
+              par.forEach(e => e.style.color = toggled ? set.parColor : '');
+              adj.forEach(e => e.style.color = toggled ? set.adjColor : '');
+              panel3.style.backgroundColor = toggled ? 'rgb(195,209,255)' : '';
+            });
+          }
+        });
+      }
+
+      /* =========================
+        Buttons (scoped). Note: buttons are global in your layout,
+        but we look in root first then fallback to document.
+        ========================= */
+      function setupButtons(root = document) {
+        const get = sel => (root && root.querySelector ? root.querySelector(sel) : null) || document.querySelector(sel);
+
+        const btnKana = get('#btnKana');
+        const btnAnalis = get('#btnAnalis');
+        const btnColor = get('#btnColor');
+
+        // btnKana: toggle ruby rt:not(.sp)
+        if (btnKana) {
+          btnKana.removeEventListener && btnKana.replaceWith(btnKana.cloneNode(true)); // reset listeners (defensive)
+          const fresh = get('#btnKana');
+          fresh.addEventListener('click', () => {
+            const current = fresh.textContent.trim().toLowerCase();
+            const show = current === 'show';
+            fresh.textContent = show ? 'Hide' : 'Show';
+            fresh.style.backgroundColor = show ? '#c3d8fa' : '';
+            document.querySelectorAll('ruby').forEach(r => {
+              r.querySelectorAll('rt:not(.sp)').forEach(rt => rt.style.visibility = show ? 'visible' : 'hidden');
+            });
+          });
+        }
+
+        // btnAnalis
+        if (btnAnalis) {
+          btnAnalis.removeEventListener && btnAnalis.replaceWith(btnAnalis.cloneNode(true));
+          const fresh = get('#btnAnalis');
+          fresh.addEventListener('click', () => {
+            const current = fresh.textContent.trim().toLowerCase();
+            const show = current === 'show';
+            fresh.textContent = show ? 'Hide' : 'Show';
+            fresh.style.backgroundColor = show ? '#c3d8fa' : '';
+            document.querySelectorAll('.urutan1').forEach(el => el.classList.toggle('hid1'));
+            document.querySelectorAll('.panel').forEach(el => el.classList.toggle('hid2'));
+            document.querySelectorAll('.contentPoint').forEach(el => el.classList.toggle('leftPadding'));
+            document.querySelectorAll('.terjemahan, .rubah').forEach(el => {
+              el.classList.toggle('terjemahan');
+              el.classList.toggle('rubah');
+            });
+          });
+        }
+
+        // btnColor
+        if (btnColor) {
+          btnColor.removeEventListener && btnColor.replaceWith(btnColor.cloneNode(true));
+          const fresh = get('#btnColor');
+          fresh.addEventListener('click', () => {
+            const current = fresh.textContent.trim().toLowerCase();
+            const show = current === 'show';
+            fresh.textContent = show ? 'Hide' : 'Show';
+            fresh.style.backgroundColor = show ? '#c3d8fa' : '';
+            document.querySelectorAll('.par').forEach(el => el.style.color = show ? '#4b95ad' : '');
+          });
+        }
+      }
+
+      /* =========================
+        Init: render into konten001 & konten002
+        ========================= */
+      window.addEventListener('load', () => {
+        console.log('init: starting render');
+
+        // konten001 → punya panel (pakai panel markup dari data1)
+        renderContent({
+          id: 'konten001',
+          main: data2.bag1,
+          panel: data1.bag1
+        });
+
+        // konten002 → tanpa panel
+        renderContent({
+          id: 'konten002',
+          main: data2.bag2
+          // no panel param => renderContent akan melewatinya
+        });
+
+        // konten003 → tanpa panel
+        renderContent({
+          id: 'konten003',
+          main: data2.bag3
+          // no panel param => renderContent akan melewatinya
+        });
+
+        // konten004 → tanpa panel
+        renderContent({
+          id: 'konten004',
+          main: data2.bag4
+          // no panel param => renderContent akan melewatinya
+        });
+
+        // pemasangan global fallback (jika kamu ingin memastikan)
+        setupPanelClicks(document);
+        // setupButtons(document);
+      });
+      </script>
+
+
+    </body>
+</html>
